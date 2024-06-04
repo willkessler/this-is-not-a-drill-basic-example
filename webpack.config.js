@@ -40,8 +40,7 @@ module.exports = {
       crypto: require.resolve('crypto-browserify'),
       vm: require.resolve("vm-browserify"),
       stream: require.resolve("stream-browserify"),
-      process: require.resolve("process/browser"),
-      buffer: false,
+      process: require.resolve("process/browser")
     },
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
