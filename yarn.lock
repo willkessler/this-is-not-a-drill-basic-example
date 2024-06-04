@@ -1037,10 +1037,10 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@this-is-not-a-drill/vanillajs-sdk@^1.0.24":
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/@this-is-not-a-drill/vanillajs-sdk/-/vanillajs-sdk-1.0.24.tgz#a5d6289bfbe697c17f4a1ae60436f351f08ead72"
-  integrity sha512-a7y9LgyMzOuBlnH+sKcxzw51kowwgkJP9OEriznaLkFNNwigmTXio+uog0zhsX+3yxnecdA7xHaFwt6v9EspXQ==
+"@this-is-not-a-drill/vanillajs-sdk@^1.0.25":
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/@this-is-not-a-drill/vanillajs-sdk/-/vanillajs-sdk-1.0.25.tgz#6c8ca435aafa68e170aebb10481ba3b26f865422"
+  integrity sha512-hrNML7T9X1FwY/QdbuEjxwAOJsk6/q718YULTmy2h+olQzjJUHK8RE9WWbi6TeA3dNNHWypC1homHeoag66VTw==
   dependencies:
     "@types/dompurify" "^3.0.5"
     concurrently "^8.2.2"

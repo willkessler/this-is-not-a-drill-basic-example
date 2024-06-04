@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import { configureTinad, 
          generateDefaultConfiguration, 
          getCurrentConfiguration, 
+         resetViewsForCurrentEndUser,
          SDKConfiguration } from '@this-is-not-a-drill/vanillajs-sdk';
 
 dotenv.config();
@@ -71,3 +72,9 @@ const currentConfig = getCurrentConfiguration();
 console.log(`Current TINAD config: ${JSON.stringify(currentConfig,null,2)}`);
 
 console.log('TINAD Configuration done.');
+
+const resetButton = document.getElementById('reset-notifications');
+resetButton.onclick = function() {
+  console.log ('Resetting views'); 
+  resetViewsForCurrentEndUser();
+};
