@@ -11,8 +11,13 @@
         padding-left:20px;
       }
      .title {
-       padding-top:20px;
+       padding-top:10px;
        font-size:40px;
+       font-weight:800;
+       color:#02b0de;
+     }
+     .subtitle {
+       color: #02b0de;
      }
      .reset {
        margin-top:10px;
@@ -21,13 +26,23 @@
        border:1px solid grey;
        border-radius:4px;
        cursor:pointer;
+       width:400px;
+       margin-right:10px;
      }
      .instructions {
        font-size:16px;
        padding-top:20px;
-       margin-top:20px;
+       margin-top:10px;
        border-top:1px solid grey;
        line-height:30px;
+       max-width:400px;
+     }
+     .help {
+       font-style:italic;
+       font-size:12px;
+       margin-top:5px;
+       max-width:400px;
+       margin-right:10px;
      }
      code {
        background:#ffa;
@@ -40,11 +55,12 @@
   <body style="margin:0;padding:0">
     <img src="./ThisIsNotADrill_cutout.png" width="200" height="200" />
     <div class="outer">
-      Hello! This is a barebones demo for...
       <div class="title">This Is Not A Drill!</div>
+      <div class="subtitle">Barebones Demo</div>
       <button class="reset" id="reset-notifications">
-        Reset notifications for the current user id
+        Reset notifications
       </button>
+      <div class="help">Please note: this will reset notifications for the current user id.</div>
       <div class="instructions">
         Update <code>src/index.ts</code> to add your API key and
         alter the configuration passed to <code>configureTinad()</code>

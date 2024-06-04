@@ -9,7 +9,7 @@
     "start": "webpack serve --config webpack.config.js --mode development"
   },
   "dependencies": {
-    "@this-is-not-a-drill/vanillajs-sdk": "^1.0.24",
+    "@this-is-not-a-drill/vanillajs-sdk": "^1.0.25",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
     "dotenv": "^16.4.5",
