@@ -6,7 +6,7 @@ import {
   SDKConfiguration
 } from '@this-is-not-a-drill/vanillajs-sdk';
 
-dotenv.config();
+import environment from './environment';
 
 // Here is an example of an SDKConfiguration object with some basic defaults set.
 // Depending on the displayMode
@@ -63,8 +63,8 @@ dotenv.config();
 
 console.log('Configurating TINAD SDK...');
 const newConfig = generateDefaultConfiguration();
-newConfig.api.endpoint = process.env.API_ENDPOINT;
-newConfig.api.key = process.env.API_KEY;
+newConfig.api.endpoint = environment.API_ENDPOINT;
+newConfig.api.key = environment.API_KEY;
 newConfig.api.displayMode = 'toast';
 console.log(`newConfig: ${JSON.stringify(newConfig,null,2)}`);
 configureTinad(newConfig);
