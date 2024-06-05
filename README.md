@@ -55,3 +55,5 @@ notifications on certain pages).
 
 You can read more in our <a
 href="https://docs.this-is-not-a-drill.com">documentation.</a>
+
+Looking for a tighter integration with React? Take a look at our <a href="https://github.com/willkessler/this-is-not-a-drill-react-example">React SDK.</a>
