@@ -2,21 +2,17 @@
 
 <a href="https://this-is-not-a-drill.com"><img src="https://app.this-is-not-a-drill.com/ThisIsNotADrill1.png" width="250" height="250"></a>
 
-This example shows how you can implement the TINAD SDK for any node application.
+This example shows how you can implement the This Is Not A Drill! (`TINAD`) SDK for any `node` application.
 
-You can simply do :
+Install the SDK via:
 
 ``` javascript
 npm i @this-is-not-a-drill/vanillajs-sdk
-```
-
 or
-
-``` javascript
 yarn add @this-is-not-a-drill/vanillajs-sdk
 ```
 
-and then:
+Then in your node application:
 
 ``` javascript
 import {
@@ -35,10 +31,11 @@ newConfig.api.key = environment.API_KEY;
 // Set this to whatever notification display mode you prefer:
 // toast, modal, banner, inline.
 newConfig.api.displayMode = 'toast';
-// Finally, tell TINAD to start (over) with your settings.
+
+// Lastly, tell TINAD to start (or restart) with your configuration.
 configureTinad(newConfig);
 ```
 
-After this point, you can always call `configureTinad({<new configuration>})` to make TINAD operate in a new way (e.g. inline notifications on certain pages).
+After this, you can always call `configureTinad({<new configuration>})` to make `TINAD` operate in a new way (e.g. inline notifications on certain pages).
 
 You can read more in our <a href="https://docs.this-is-not-a-drill.com">documentation.</a>
