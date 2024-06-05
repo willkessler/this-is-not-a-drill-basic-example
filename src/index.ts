@@ -19,7 +19,7 @@ import environment from './environment';
 {
     api: {
       displayMode : 'toast',
-      userId: undefined, // will be set later by either the user or autoset
+      userId: undefined, // will be set later by either your code or it will be set automatically by the SDK
       key: '', // set your API key in this portion of the SDKConfiguration object
       endpoint: 'https://api.this-is-not-a-drill.com',
       environments: [ 'Development' ],
@@ -61,23 +61,23 @@ import environment from './environment';
 */
 
 console.log('Configurating TINAD SDK...');
+
 const newConfig = generateDefaultConfiguration();
 newConfig.api.endpoint = environment.API_ENDPOINT;
 newConfig.api.key = environment.API_KEY;
 newConfig.api.displayMode = 'toast';
-console.log(`newConfig: ${JSON.stringify(newConfig,null,2)}`);
 configureTinad(newConfig);
 
-const currentConfig = getCurrentConfiguration();
-console.log(`Current TINAD config: ${JSON.stringify(currentConfig,null,2)}`);
+// const currentConfig = getCurrentConfiguration();
+// console.log(`Current TINAD config: ${JSON.stringify(currentConfig,null,2)}`);
 
-console.log('TINAD Configuration done.');
+console.log('TINAD configuration complete.');
 
 const resetButton = document.getElementById('reset-notifications');
 
-// When you reconfigure TINAD with the current configuration, this has
-// the effect of resetting the views for the current userId (as well
-// as stopping any notification display in progress).
+// When you reconfigure TINAD with the same configuration a second
+// time, this has the effect of resetting the views for the current
+// userId (as well as stopping any notification display in progress).
 
 resetButton.onclick = function() {
   console.log ('Resetting views'); 
