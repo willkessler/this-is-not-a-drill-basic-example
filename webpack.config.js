@@ -1,8 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const dotenv = require('dotenv');
-
-dotenv.config();
 
 const envKeys = Object.keys(process.env).reduce((prev, next) => {
   prev[`process.env.${next}`] = JSON.stringify(process.env[next]);
@@ -45,7 +42,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       '@this-is-not-a-drill/vanillajs-sdk': 
-      path.resolve(__dirname, 'node_modules/@this-is-not-a-drill/vanillajs-sdk/dist/bundle.js')
+      path.resolve(__dirname, 'node_modules/@this-is-not-a-drill/vanillajs-sdk/dist/index.js')
     },
   },
   output: {

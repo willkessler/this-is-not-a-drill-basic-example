@@ -1037,10 +1037,10 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@this-is-not-a-drill/vanillajs-sdk@^1.0.25":
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/@this-is-not-a-drill/vanillajs-sdk/-/vanillajs-sdk-1.0.25.tgz#6c8ca435aafa68e170aebb10481ba3b26f865422"
-  integrity sha512-hrNML7T9X1FwY/QdbuEjxwAOJsk6/q718YULTmy2h+olQzjJUHK8RE9WWbi6TeA3dNNHWypC1homHeoag66VTw==
+"@this-is-not-a-drill/vanillajs-sdk@^1.0.27":
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/@this-is-not-a-drill/vanillajs-sdk/-/vanillajs-sdk-1.0.27.tgz#0d7758d9e2963b1f1c057a8e2950bc62e8e9f938"
+  integrity sha512-x0Xxu46Q4KLI6cmLx0AQpQJm7bldfP/IqI1OG7mI2AHZqVK86UTv7PK6Tlxz6WQga09Ojyui0DK/NQDOC8PuSA==
   dependencies:
     "@types/dompurify" "^3.0.5"
     concurrently "^8.2.2"
@@ -2077,11 +2077,6 @@ dompurify@^3.1.2:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-3.1.5.tgz#2c6a113fc728682a0f55684b1388c58ddb79dc38"
   integrity sha512-lwG+n5h8QNpxtyrJW/gJWckL+1/DQiYMX8f7t8Z2AZTPw1esVrqjI63i7Zc2Gz0aKzLVMYC1V1PL/ky+aY/NgA==
-
-dotenv@^16.4.5:
-  version "16.4.5"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
-  integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
 
 eastasianwidth@^0.2.0:
   version "0.2.0"
