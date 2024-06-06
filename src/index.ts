@@ -1,8 +1,8 @@
 //
-// This is a basic typescript example of how to include the TINAD sdk.
-// Change the displayMode to change the way your notifications appear,
+// Basic typescript example on how you can add the TINAD SDK to your app.
+// Change the displayMode (below) to update the way your notifications appear,
 // and consult the docs and the example configuration object at the bottom
-// to see what other configuration settings are available.
+// of this script to see other available configuration settings.
 
 import { 
   configureTinad, 
@@ -10,31 +10,33 @@ import {
   getCurrentConfiguration, 
   SDKConfiguration
 } from '@this-is-not-a-drill/vanillajs-sdk';
-
 import environment from './environment';
 
 console.log('Configurating TINAD SDK...');
-
+// Acquire a sensible initial configuration.
 const newConfig = generateDefaultConfiguration();
 
-// Put your values into the configuration.
-newConfig.api.endpoint = environment.API_ENDPOINT;
+// Put your API key into the configuration.
+newConfig.api.endpoint = environment.API_ENDPOINT; // you don't need to change this
 newConfig.api.key = environment.API_KEY;
 
-// You can try changing this to 'modal', 'inline', or 'banner'.
+// Try changing this to 'modal', 'inline', or 'banner' to see
+// different notification styles.
 newConfig.api.displayMode = 'toast';
 
+// Update the SDK with your new settings (restarts the SDK).
 configureTinad(newConfig);
 
-// Uncomment these to see what TINAD has for its current configuration.
+// Uncomment the next two lines to see TINAD's current configuration.
 // const currentConfig = getCurrentConfiguration();
 // console.log(`Current TINAD config: ${JSON.stringify(currentConfig,null,2)}`);
 
 console.log('TINAD configuration complete.');
 
+// Set up the demo's Reset button. In production you'll most likely never use this.
 const resetButton = document.getElementById('reset-notifications');
 
-// When you reconfigure TINAD with the same configuration a second
+// Note: When you reconfigure TINAD with the same configuration a second
 // time, this has the effect of resetting the views for the current
 // userId (as well as stopping any notification display in progress).
 
@@ -45,14 +47,13 @@ resetButton.onclick = function() {
 };
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
-// This is an example SDKConfiguration object with some basicdefaults.
-//  Depending on the displayMode you choose, you will actually
-// only need the property that's relevant to it, e.g.  if you choose
-// displayMode: 'toast', then you actually only need to include the
-// 'toast' property. Add your API key in the api block.
-// If you don't set a specific user id, the SDK will
-// autogenerate one for you.
-// See the docs at docs.this-is-not-a-drill.com for more.
+// Below, find an example SDKConfiguration object with some
+// basicdefaults.  Depending on the displayMode you choose, you will
+// actually only need the property that's relevant to it, e.g.  if you
+// choose displayMode: 'toast', then you actually only need to include
+// the 'toast' property. Add your API key in the api block.  If you
+// don't set a specific user id, the SDK will autogenerate one for
+// you.  See the docs at docs.this-is-not-a-drill.com for more.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
 /*
 {
