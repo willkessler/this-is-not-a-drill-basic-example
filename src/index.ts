@@ -65,6 +65,7 @@ console.log('Configurating TINAD SDK...');
 const newConfig = generateDefaultConfiguration();
 newConfig.api.endpoint = environment.API_ENDPOINT;
 newConfig.api.key = environment.API_KEY;
+// try changing this to 'modal', 'inline', or 'banner'.
 newConfig.api.displayMode = 'toast';
 configureTinad(newConfig);
 
