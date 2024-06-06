@@ -1,8 +1,10 @@
 //
-// Basic typescript example on how you can add the TINAD SDK to your app.
-// Change the displayMode (below) to update the way your notifications appear,
-// and consult the docs and the example configuration object at the bottom
-// of this script to see other available configuration settings.
+// This is a basic typescript example on how you can add the TINAD SDK
+// to your app.  Change the displayMode (below) to update the way your
+// notifications appear, and consult the docs and the example
+// configuration object at the bottom of this script to see other
+// available configuration settings.
+//
 
 import { 
   configureTinad, 
@@ -12,39 +14,38 @@ import {
 } from '@this-is-not-a-drill/vanillajs-sdk';
 import environment from './environment';
 
-console.log('Configurating TINAD SDK...');
-// Acquire a sensible initial configuration.
-const newConfig = generateDefaultConfiguration();
+const newConfig = generateDefaultConfiguration(); // Set up a sensible initial configuration.
+newConfig.api.endpoint = environment.API_ENDPOINT; // this is auto-set for you.
+newConfig.api.key = environment.API_KEY; // if you are seeing this on Stackblitz, it's already set up for you
 
-// Put your API key into the configuration.
-newConfig.api.endpoint = environment.API_ENDPOINT; // you don't need to change this
-newConfig.api.key = environment.API_KEY;
-
-// Try changing this to 'modal', 'inline', or 'banner' to see
-// different notification styles.
+//
+// *** TRY CHANGING THE DISPLAY MODE ***
+// Try replacing the value of 'toast' with:
+// 'modal', 'inline', or 'banner' 
+// to see different notification styles.
+//
 newConfig.api.displayMode = 'toast';
 
-// Update the SDK with your new settings (restarts the SDK).
-configureTinad(newConfig);
+configureTinad(newConfig); // Finally, update the SDK with your new settings (this also restarts the SDK).
+
+//
+// Set up this demo's "Reset notifications" button. 
+// (In production you'll most likely never use this functionality.)
+//
+const resetButton = document.getElementById('reset-notifications');
+resetButton.onclick = function() {
+  // Note: When you reconfigure TINAD with the same configuration a second
+  // time, this has the effect of resetting the views for the current
+  // userId (as well as stopping any notification display in progress).
+  console.log ('Resetting views'); 
+  const currentConfig = getCurrentConfiguration();
+  configureTinad(currentConfig);
+};
 
 // Uncomment the next two lines to see TINAD's current configuration.
 // const currentConfig = getCurrentConfiguration();
 // console.log(`Current TINAD config: ${JSON.stringify(currentConfig,null,2)}`);
 
-console.log('TINAD configuration complete.');
-
-// Set up the demo's Reset button. In production you'll most likely never use this.
-const resetButton = document.getElementById('reset-notifications');
-
-// Note: When you reconfigure TINAD with the same configuration a second
-// time, this has the effect of resetting the views for the current
-// userId (as well as stopping any notification display in progress).
-
-resetButton.onclick = function() {
-  console.log ('Resetting views'); 
-  const currentConfig = getCurrentConfiguration();
-  configureTinad(currentConfig);
-};
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
 // Below, find an example SDKConfiguration object with some
