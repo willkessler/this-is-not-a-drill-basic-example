@@ -67,8 +67,12 @@ resetButton.onclick = function() {
       domains: [],
     },
     toast: {
-      position: 'top-right',
+      // One of these:
+      // 'top', 'top-left, 'top-right, 'center', 'center-left, 'center-right,
+      // 'bottom', 'bottom-left, or 'bottom-right'.
+      position: 'top-right', // How long the toast shows (in milliseconds)
       duration: 5000,
+      progressBar: false,
     },
     modal: {
       confirmButtonLabel: 'OK',
